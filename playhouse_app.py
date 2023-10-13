@@ -13,7 +13,7 @@ st.set_page_config(
 st.markdown("<style> footer {visibility: hidden;} </style>", unsafe_allow_html=True)
 
 st.title("💬 Playhouse Social Media Analytics")
-st.markdown(" This application is a Streamlit app used to review social media analytics. ")
+st.markdown(" This is a Streamlit app to explore social media analytics. ")
 
 # Sample DataFrame
 url = 'https://raw.githubusercontent.com/Williamz4lyf/playhouse/71e82ae54addd56c12e1edb9cf2374ad8d9805cf/playhouse.csv'
