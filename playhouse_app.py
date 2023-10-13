@@ -151,4 +151,4 @@ with col4:
 st.markdown("<br><br>", unsafe_allow_html=True)
 
 # Footer
-st.markdown("Prepared by Jay Leno", key="footer")
+st.markdown("Prepared by Nanke Williams", key="footer")
