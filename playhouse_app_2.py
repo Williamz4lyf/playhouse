@@ -9,18 +9,7 @@ from scipy import stats
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Set the page layout to wide
-st.set_page_config(
-    page_title="Playhouse Social Media Analytics: Regression Modelling",
-    page_icon=":speech_balloon:",
-    layout="wide",
-    initial_sidebar_state="expanded",
-)
-st.markdown("<style> footer {visibility: hidden;} </style>", unsafe_allow_html=True)
-
 st.title("💬 Playhouse Social Media Analytics: Regression Modelling")
-st.write('Prepared by Nanke Williams')
-
 
 # Load the data
 url = 'https://raw.githubusercontent.com/Williamz4lyf/playhouse/71e82ae54addd56c12e1edb9cf2374ad8d9805cf/playhouse.csv'
@@ -113,7 +102,7 @@ st.markdown("<br><br>", unsafe_allow_html=True)
 X = data.drop(columns=[target_feature])
 X = pd.get_dummies(X, columns=categorical_features, drop_first=True)
 y = data[target_feature]
-# Filter features with importances greater than 0.05
+# Filter features with importance greater than 0.05
 selected_features = X_train.columns[gb_model.feature_importances_ > 0]
 X = X[selected_features]
 X_const = sm.add_constant(X)
@@ -155,3 +144,4 @@ axes.ravel()[3].set_title('Component-Component (CC) Plot')
 
 st.pyplot(fig)
 
+st.write('Prepared by Nanke Williams')

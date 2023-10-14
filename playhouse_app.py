@@ -3,15 +3,6 @@ import pandas as pd
 import altair as alt
 import plotly.express as px
 
-# Set the page layout to wide
-st.set_page_config(
-    page_title="Playhouse Social Media Analytics",
-    page_icon=":speech_balloon:",
-    layout="wide",
-    initial_sidebar_state="expanded",
-)
-st.markdown("<style> footer {visibility: hidden;} </style>", unsafe_allow_html=True)
-
 st.title("💬 Playhouse Social Media Analytics")
 st.markdown(" This is a Streamlit app to explore social media analytics. ")
 
