@@ -101,7 +101,7 @@ st.markdown("<br><br>", unsafe_allow_html=True)
 # Generate a regression model summary using the entire dataset with feature importances
 # Fit an OLS regression model and display summary
 X = data.drop(columns=[target_feature])
-X = pd.get_dummies(X, columns=categorical_features, drop_first=True)
+X = pd.get_dummies(X, columns=X.select_dtypes(include='object').columns, drop_first=True)
 y = data[target_feature]
 # Filter features with importance greater than 0.05
 selected_features = X_train.columns[gb_model.feature_importances_ > 0]
